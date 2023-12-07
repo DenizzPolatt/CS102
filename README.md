@@ -1,0 +1,3 @@
+# CS 102: Algorithms and Programming II
+*Course Description:*
+The course has two components. The first is simply a continuation of CS101 aimed at expanding the range of techniques you have available to solve problems. These new techniques will be presented in formal lectures and, as in CS101, you will be given lab. assignments designed to let you practice them. Material in this section includes recursion, files and some basic data structures, plus a little about object-oriented programming, event-driven architectures, searching and sorting. There will be written exams on these topics. The second component of the course is a semester-long design project.
