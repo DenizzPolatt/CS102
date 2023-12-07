@@ -1,0 +1,38 @@
+				CS 102 Hangman Group Work 
+     /**
+     * 
+     * @param letter  : Letter that predicted by player.
+     * This function gets a letter as a parameter and update usedLetters, allLetters and knownSoFar accordingly.
+     * It increments numIncorrectTries if player guess wrong. 
+     * It raises an error message if @param letter is not present in the allLetters and do not increment numOfIncorrectTries.
+     * 
+     */
+    public void tryThis(char letter){
+        String letterStr = (String.valueOf(letter));
+        int firstIndexOfLetter = secretWord.indexOf(letterStr);
+        int indexAtAlphabet = allLetters.indexOf(letterStr);
+
+        if(indexAtAlphabet >= 0){
+            usedLetters.setCharAt(indexAtAlphabet, letter);
+            char charToCoverUsedLetters = '*'; 
+            // charToCoverUsedLetters can be specified as ' ', '*' or anything else. 
+            //Change this whatever you want to use to cover used letters in alphabet. 
+            //We used '*' since it makes it easy to understand how many char there are.
+            allLetters.setCharAt(indexAtAlphabet,charToCoverUsedLetters);
+        }
+        else{
+            System.out.println("Select a uppercase letter from alphabet.");
+            return;
+        }
+
+        if(firstIndexOfLetter >= 0){
+            for(int i = firstIndexOfLetter ; i < secretWord.length() ; i++){
+                if(secretWord.charAt(i) == letter){
+                    knownSoFar.setCharAt(i, letter);
+                }
+            }
+        }
+        else{
+            numIncorrectTries++;
+        }
+    }
